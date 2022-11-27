@@ -1,8 +1,5 @@
-import { Client, initLogger } from "@iota/client";
+import { SingleNodeClient } from "@iota/iota.js";
 
-initLogger();
-
-export const client = new Client({
-  nodes: ["https://api.testnet.shimmer.network"],
-  localPow: true,
-});
+export const client = new SingleNodeClient(
+  "https://api.testnet.shimmer.network/"
+);
