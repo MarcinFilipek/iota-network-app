@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div>
-      <p>Iota network app</p>
+      <p className="font-bold">Iota network app</p>
       {!nodeInfo && <p>Loading...</p>}
       {nodeInfo && (
         <>
