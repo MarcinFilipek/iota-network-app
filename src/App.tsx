@@ -1,28 +1,16 @@
-import { useEffect, useState } from "react";
-import { client } from "./client/client";
-import { INodeInfo } from "@iota/iota.js";
-
-const getNodeInfo = async () => {
-  const info = await client.info();
-  return info;
-};
+import { useNodeInfo } from "./services";
 
 function App() {
-  const [nodeInfo, setNodeInfo] = useState<INodeInfo | null>(null);
-  useEffect(() => {
-    getNodeInfo().then((info) => {
-      setNodeInfo(info);
-    });
-  }, []);
+  const { isLoading, data } = useNodeInfo();
 
   return (
     <div>
       <p className="font-bold">Iota network app</p>
-      {!nodeInfo && <p>Loading...</p>}
-      {nodeInfo && (
+      {isLoading && <p>Loading...</p>}
+      {data && (
         <>
-          <p>Name: {nodeInfo.name}</p>
-          <p>Varsion: {nodeInfo.version}</p>
+          <p>Name: {data.name}</p>
+          <p>Varsion: {data.version}</p>
         </>
       )}
     </div>
