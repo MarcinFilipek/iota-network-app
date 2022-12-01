@@ -1,19 +1,13 @@
-import { useNodeInfo } from "./services";
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "./containers";
 
 function App() {
-  const { isLoading, data } = useNodeInfo();
-
   return (
-    <div>
-      <p className="font-bold">Iota network app</p>
-      {isLoading && <p>Loading...</p>}
-      {data && (
-        <>
-          <p>Name: {data.name}</p>
-          <p>Varsion: {data.version}</p>
-        </>
-      )}
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<p>Home</p>} />
+      </Route>
+    </Routes>
   );
 }
 
