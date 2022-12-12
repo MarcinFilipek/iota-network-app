@@ -1,5 +1,6 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Dialog } from "../Dialog";
+import { Step1 } from "./Steps";
 
 export const CreateWallet = () => (
   <Dialog>
@@ -13,7 +14,7 @@ export const CreateWallet = () => (
           </>
         }
       >
-        <Route index element={<p>Step 1</p>} />
+        <Route index element={<Step1 />} />
         <Route path="/2" element={<p>Step 2</p>} />
       </Route>
     </Routes>
