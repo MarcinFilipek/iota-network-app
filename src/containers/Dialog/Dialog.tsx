@@ -10,7 +10,7 @@ export const Dialog = ({ children }: Props) => {
   return overlayRootEl
     ? createPortal(
         <div className="w-screen h-screen top-0 left-0 absolute backdrop-blur-lg flex flex-col justify-center items-center">
-          <div className="border-2 border-cyan-800 w-full max-w-sm">
+          <div className="border-2 bg-cyan-800 w-full max-w-sm h-96 overflow-auto rounded-xl p-2">
             {children}
           </div>
         </div>,
