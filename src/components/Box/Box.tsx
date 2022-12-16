@@ -1,12 +1,11 @@
 type Props = {
   children: React.ReactNode;
-  p?: number;
 };
 
-export const Box = ({ children, p = 0 }: Props) => {
+export const Box = ({ children }: Props) => {
   return (
     <div
-      className={`bg-stone-200 rounded-3xl shadow-[20px_20px_60px_0_rgba(190,190,190,1),-20px_-20px_60px_0_rgba(255,255,255,1)] flex flex-col w-full p-${p} h-full`}
+      className={`bg-[#E6E7EE] rounded-3xl shadow-[20px_20px_36px_0_rgba(166,166,171,1),-20px_-20px_36px_0_rgba(255,255,255,1)] flex flex-col w-full h-full`}
     >
       {children}
     </div>

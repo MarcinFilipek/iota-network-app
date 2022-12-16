@@ -3,7 +3,7 @@ import { CreateWallet, Layout } from "./containers";
 
 function App() {
   return (
-    <div className="h-screen w-screen bg-stone-200 px-4 py-8">
+    <div className="h-screen w-screen bg-stone-200">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<p>Home</p>} />
