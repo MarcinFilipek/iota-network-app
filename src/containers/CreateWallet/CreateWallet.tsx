@@ -1,5 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom";
-import { Box } from "../../components/Box";
+import { Box } from "../../stories";
 import { Dialog } from "../Dialog";
 import { Step1 } from "./Steps";
 

@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { Box } from "../../components/Box";
+import { Box } from "../../stories/Box";
 
 export const Layout = () => (
   <div className="flex flex-row bg-[#E6E7EE] px-10 py-8 h-full w-full gap-4">
