@@ -1,15 +1,16 @@
-import { Bip39 } from "@iota/crypto.js";
-import { useEffect, useState } from "react";
+import { Checkbox } from "../../../../stories";
 
-export const Step1 = () => {
-  const [mnemonic, setMnemonic] = useState<string[] | null>(null);
-
-  useEffect(() => {
-    const randomMnemonic = Bip39.randomMnemonic();
-    setMnemonic(randomMnemonic.split(" "));
-  }, []);
-
-  return (
-    <div>{mnemonic && mnemonic.map((word) => <p key={word}>{word}</p>)}</div>
-  );
-};
+export const Step1 = () => (
+  <div className="p-4 flex flex-col gap-4">
+    <p className="text-base">
+      In the next step we will show you 24 words,, your recovery phrase, with
+      which you can restore your wallet.
+    </p>
+    <div className="flex flex-row gap-4">
+      <Checkbox />
+      <p className="text-sm">
+        If I lose my recovery phrase, there is no way to recovery my wallet.
+      </p>
+    </div>
+  </div>
+);
